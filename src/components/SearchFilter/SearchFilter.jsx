@@ -1,4 +1,3 @@
-// import { Component } from 'react';
 import { useDispatch } from 'react-redux';
 import s from './SearchFilter.module.css';
 import { setFilterAction } from 'store/contactsSlice';

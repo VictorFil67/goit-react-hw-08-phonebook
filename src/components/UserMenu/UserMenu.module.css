@@ -1,0 +1,10 @@
+.wrap {
+  display: flex;
+  gap: 20px;
+  /* padding-left: 20px;
+  padding-top: 5px; */
+  font-size: 20px;
+}
+.email {
+  margin: 0;
+}
