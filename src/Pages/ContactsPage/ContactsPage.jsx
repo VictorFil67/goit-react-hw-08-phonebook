@@ -3,7 +3,7 @@ import { Contacts } from 'components/Contacts/Contacts';
 import { SearchFilter } from 'components/SearchFilter/SearchFilter';
 // import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
-import { selectError, selectIsLoading } from 'store/selectors';
+import { selectError } from 'store/selectors';
 // import { useSelector } from 'react-redux';
 // import { selectUserName } from '../../store/auth/selectors';
 
@@ -15,7 +15,6 @@ export const ContactsPage = () => {
     <div>
       <h1>Phonebook</h1>
       <ContactForm />
-      {/* {isLoading && <h1>Loading...</h1>} */}
       {error && <h1>{error}</h1>}
       <h2>Contacts</h2>
       <SearchFilter />
