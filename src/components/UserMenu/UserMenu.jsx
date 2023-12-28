@@ -11,25 +11,23 @@ export const UserMenu = () => {
   const dispatch = useDispatch();
   return (
     <div className={s.wrap}>
-      <>
-        <p className={s.email}>{email}</p>
-        <button
-          onClick={() => {
-            dispatch(logoutThunk())
-              .unwrap()
-              .then(res => {
-                // navigate('/contacts');
-                toast.success(`You are logout!!!`);
-              })
-              .catch(() => {
-                toast.error('Something went wrong!!!');
-                // alert('error');
-              });
-          }}
-        >
-          Logout
-        </button>
-      </>
+      <p className={s.email}>{email}</p>
+      <button
+        onClick={() => {
+          dispatch(logoutThunk())
+            .unwrap()
+            .then(res => {
+              // navigate('/contacts');
+              toast.success(`You are logout!!!`);
+            })
+            .catch(() => {
+              toast.error('Something went wrong!!!');
+              // alert('error');
+            });
+        }}
+      >
+        Logout
+      </button>
 
       {/* {user && <button>Logout</button>}  */}
     </div>

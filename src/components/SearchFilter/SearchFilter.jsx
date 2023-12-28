@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import s from './SearchFilter.module.css';
-import { setFilterAction } from 'store/contactsSlice';
+import { setFilterAction } from 'store/contacts/contactsSlice';
 
 export const SearchFilter = ({ filter }) => {
   const dispatch = useDispatch();

@@ -3,7 +3,7 @@ import { Contacts } from 'components/Contacts/Contacts';
 import { SearchFilter } from 'components/SearchFilter/SearchFilter';
 // import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
-import { selectError } from 'store/selectors';
+import { selectError } from 'store/contacts/selectors';
 // import { useSelector } from 'react-redux';
 // import { selectUserName } from '../../store/auth/selectors';
 

@@ -3,11 +3,11 @@ import s from '../RegisterPage/RegisterPage.module.css';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from '../../store/auth/operations';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export const Login = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { register, handleSubmit } = useForm({
     // defaultValues: {
     //   email: 'qwer@mail.com.ua',
@@ -20,7 +20,7 @@ export const Login = () => {
     dispatch(loginThunk(data))
       .unwrap()
       .then(res => {
-        navigate('/contacts');
+        // navigate('/contacts');
         toast.success(`Welcome ${res.user.name}!`);
       })
       .catch(() => {

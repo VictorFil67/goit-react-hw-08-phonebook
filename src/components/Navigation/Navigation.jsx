@@ -9,7 +9,7 @@ export const Navigation = () => {
   return (
     <div>
       <nav className={s.nav}>
-        {!isLoggedIn && (
+        {!isLoggedIn ? (
           <>
             <NavLink className={s.link} to="/register">
               Sign in
@@ -18,16 +18,12 @@ export const Navigation = () => {
               Login
             </NavLink>
           </>
+        ) : (
+          <UserMenu />
         )}
-
-        {isLoggedIn && (
-          <>
-            <UserMenu />
-          </>
-        )}
-        <NavLink className={s.link} to="/contacts">
+        {/* <NavLink className={s.link} to="/contacts">
           ContactsPage
-        </NavLink>
+        </NavLink> */}
       </nav>
 
       <hr />

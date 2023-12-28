@@ -3,19 +3,19 @@ import s from './RegisterPage.module.css';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { registerThunk } from '../../store/auth/operations';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export const Register = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const submit = data => {
     console.log(data);
     dispatch(registerThunk(data))
       .unwrap()
       .then(res => {
-        navigate('/contacts');
+        // navigate('/contacts');
         toast.success(`Welcome ${res.user.name}!`);
       })
       .catch(() => {

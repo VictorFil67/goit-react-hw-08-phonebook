@@ -3,8 +3,8 @@ import s from './ContactForm.module.css';
 
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'store/operations';
-import { selectContacts } from 'store/selectors';
+import { addContact } from 'store/contacts/operations';
+import { selectContacts } from 'store/contacts/selectors';
 // rfc - create func
 export const ContactForm = () => {
   const [name, setName] = useState('');
